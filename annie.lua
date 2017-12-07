@@ -75,7 +75,6 @@ function Annie:__init()
 									local predHP = PW:PredictHealth(minion, GetDistance(minion)*0.5+250)
 									if predHP > 0 then
 										if predHP+5 < CalcDamage(myHero, minion, 0, (self.spellData[_Q].dmg()))then
-											print(predHP)
 											self:CastQ(minion)
 										end
 									end
@@ -263,7 +262,6 @@ function Annie:Draw()
 	end
 	if self.Config.Draw.DmgDraw:Value() then
 		for i, enemy in pairs(GetEnemyHeroes()) do
-			print(enemy)
 			if ValidTarget(enemy) then
 				local barPos = GetHPBarPos(enemy)
 				if barPos.x > 0 and barPos.y > 0 then
