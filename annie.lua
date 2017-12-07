@@ -75,7 +75,8 @@ function Annie:__init()
 									local predHP = PW:PredictHealth(minion, GetDistance(minion)*0.5+250)
 									if predHP > 0 then
 										if predHP+5 < CalcDamage(myHero, minion, 0, (self.spellData[_Q].dmg()))then
-										self:CastQ(minion)
+											print(predHP)
+											self:CastQ(minion)
 										end
 									end
 								end
