@@ -262,6 +262,7 @@ function Annie:Draw()
 		end
 	end
 	if self.Config.Draw.DmgDraw:Value() then
+		print("IM ON")
 		for i, enemy in pairs(GetEnemyHeroes()) do
 			if ValidTarget(enemy) then
 				local barPos = GetHPBarPos(enemy)
