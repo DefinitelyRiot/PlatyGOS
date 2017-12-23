@@ -137,6 +137,14 @@ function Annie:__init()
 			},
 			{
 				function() 
+					return self.Rtarget and not GetCastName(myHero, 3) == "InfernalGuardian"
+				end, 
+				function() 
+					self:CastR(self.Rtarget)
+				end
+			},
+			{
+				function() 
 					return self.EREADY and self.Config.Misc.as:Value() and not self.stun
 				end, 
 				function() 
