@@ -8,9 +8,6 @@ function Pibry:__init()
 	_G.items = {}
 	Callback.Add("ProcessPacket", function(p) self:ProcessPacket(p) end)
 	self.packets = {}
-	if GetGameVersion():sub(1,4) == "6.14" then
-		self.packets = Set { 0x0033, 0x0010, 0x0113, 0x0131}
-	end
 	Callback.Add("Load", function() self:Load() end)
 	Callback.Add("GainVision", function() self:GainVision(Object) end)
 	self.lastChecked = {}
