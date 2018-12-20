@@ -1,6 +1,3 @@
-
-local CanUseSpell = Game.CanUseSpell
-
 class "Annie"
 function Annie:__init()
 	Callback.Add("Tick", function() self:Tick() end)
